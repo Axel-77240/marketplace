@@ -1,0 +1,110 @@
+<!DOCTYPE html> <head>
+    <title>Omnes Market | HomePage</title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link href="miseenpage.css" rel="stylesheet" type="text/css"/> </head>
+    <body>
+    <h1 ><img src="header.png" alt="Omnes Market" width="750" height="120"></h1>
+
+    <div class="container-fluid" style="background-color:#097770; height: 3px;"></div>
+
+    <div class="container-fluid" style="background-color:#a9c0a6; height: 80px;"><div class="row">
+        <div class="col-sm-2" style="height:60px; width: 280px; background-color:#a9c0a6; text-align: center; margin-top: 20px;">
+        <a href="accueil1.html"><img src="accueil.png" id="acc_im" alt="Home" width="100" height="45"></a></div> 
+
+        <div class="col-sm-2" style="height:60px; width: 280px; background-color:#a9c0a6; text-align: center; margin-top: 20px;">
+        <a href="toutparcourir1.html"><img src="toutparcouririm.png" id="parcourir_im" alt="Tout parcourir" width="140" height="45"></a></div> 
+
+        <div class="col-sm-2" style="height:60px; width: 280px; background-color:#a9c0a6; text-align: center; margin-top: 20px;">
+        <a href="notification.html"><img src="notifications.png" id="not_im" alt="Notifiactions" width="140" height="45"></a></div>  
+
+        <div class="col-sm-2" style="height:60px; width: 280px; background-color:#a9c0a6; text-align: center; margin-top: 20px;">
+        <a href="panier.html"><img src="panier.png" id="panier_im" alt="Panier" width="100" height="45"></a></div> 
+
+        <div class="col-sm-2" style="height:60px; width: 280px; background-color:#a9c0a6; text-align: center; margin-top: 20px;">
+        <a href="VotreCompte.html"><img src="Votrecompte.png" id="compte_im" alt="Compte" width="130" height="45"></a></div>  
+    </div></div>
+
+    <div class="container-fluid" style="background-color:#097770; height: 3px;"></div>
+    <div class="container-fluid" style="color: white; font-size: 20px;"><strong> Market vous propose des articles de prêt à porter. Ces articles sont classés en trois catégories : </strong></br>
+    - articles réguliers</br>
+    - articles haut de gamme</br>
+    - articles rares</br>
+    <strong>Les clients peuvent faire leurs achats de trois manières différentes :</strong></br>
+    - achat immédiat</br>
+    - achat par négociations : Le client négocie, via le site web Omnes Market, avec le vendeur. Il peut négocier jusqu'à 5 fois pour conclure le prix final d'un article.</br>
+    - achat par enchères : Les clients enchérissent pour un item et le plus offrant remporte la mise</br>
+    </div>
+
+    <div class="container-fluid" style="background-color:#edca82; height: 400px;">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript"> $(document).ready(function () {
+        var $carrousel = $('#carrousel'); // on cible le bloc du carrousel
+        $img = $('#carrousel img'); // on cible les images contenues dans le carrousel
+        indexImg = $img.length - 1; // on définit l'index du dernier élément
+        i = 0; // on initialise un compteur
+        $currentImg = $img.eq(i); // enfin, on cible l'image courante, qui possède l'index i (0 pour l'instant)
+        $img.css('display', 'none'); // on cache les images
+        $currentImg.css('display', 'block'); // on affiche seulement l'image courante
+        //si on clique sur le bouton "Suivant" 
+        $('.next').click(function () { // image suivante
+
+        i++; // on incrémente le compteur 
+        if (i <= indexImg) {
+        $img.css('display', 'none'); // on cache les images 
+        $currentImg = $img.eq(i); 
+        // on définit la nouvelle image 
+        $currentImg.css('display', 'block'); // puis on l'affiche
+        } 
+        else {
+        i = indexImg;
+        } });
+        //si on clique sur le bouton "Précédent" 
+        $('.prev').click(function () { // image précédente
+        i--; // on décrémente le compteur, puis on réalise la même chose que pour la fonction "suivante"
+        if (i >= 0) {
+        $img.css('display', 'none'); $currentImg = $img.eq(i); $currentImg.css('display', 'block');
+        } else { 
+            i = 0;
+        } });
+        function slideImg() {
+        setTimeout(function () { // on utilise une fonction anonyme
+            if (i < indexImg) { // si le compteur est inférieur au dernier index 
+                i++; // on l'incrémente
+            } else { // sinon, on le remet à 0 (première image) 
+                i = 0;
+            }
+            $img.css('display', 'none');
+        $currentImg = $img.eq(i);
+        $currentImg.css('display', 'block');
+        slideImg(); // on oublie pas de relancer la fonction à la fin
+        }, 4000); // on définit l'intervalle à 4000 millisecondes (4s) 
+    }
+        slideImg(); // enfin, on lance la fonction une première fois
+     });
+    </script>
+
+<div id="carrousel" style="text-align: center; font-size: 30px; color:#097770"><strong>Sélection du jour</strong>
+    <ul>
+    <li><img src="Chauss/chaussuref2.png" width="350" height="200" /></li> 
+    <li><img src="Chauss/chaussureh2.png" width="350" height="200" /></li>
+    <li><img src="Chauss/chaussuref4.png" width="350" height="200" /></li>
+    <li><img src="Chauss/chaussuref5.png" width="350" height="200" /></li>
+    <li><img src="Chauss/chaussuref6.png" width="350" height="200" /></li>
+    </ul> </div>
+    <input type="button" value="Précédent" class="prev">
+    <input type="button" value="Suivant" class="next"> </div>
+
+    <div class="container-fluid" style="background-color:#a9c0a6; height: 450px; text-align: center;"></br>
+        <a><strong>Nous contacter : </strong></a><br />
+        <a><img src="telephone.png" id="tel" alt="telephone" width="20" height="20"></a> 
+        <a>01 44 39 06 00</a></br>
+        <a><img src="email.png" id="mail" alt="email" width="30" height="20"></a>
+        <a href="mailto:omnes.market@gmail.com">omnes.market@gmail.com </a></br></br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.355849081331!2d2.2864078155873973!3d48.85142437928681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f581a8f%3A0xcc038371dc7bf603!2s10%20Rue%20Sextius%20Michel%2C%2075015%20Paris!5e0!3m2!1sfr!2sfr!4v1669917072760!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe></br>
+        <a>Copyright &copy; 2022 Omnes Market</a>
+    </div> 
+       
+    </body>

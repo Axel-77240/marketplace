@@ -1,0 +1,26 @@
+body { background-color: #edca82; 
+}
+h1{
+text-align: center;
+}
+.form-submit {
+
+    background: black;
+    
+    color: white;
+    
+
+    height: 40px;
+    
+    width: 160px;
+    
+}
+
+.box{
+    position: center;
+}
+
+.barrecherche{
+    background: white;
+    size: 500px;
+}

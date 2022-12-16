@@ -1,0 +1,24 @@
+body { background-color: #edca82; 
+}
+h1{
+text-align: center;
+}
+.marge{
+   margin-top: 10px; 
+}
+.marge-left{
+   margin-left: 120px;
+}
+.margebouton{
+   margin-left: 150px;
+   margin-top: 40px; 
+   background-color: #a9c0a6; 
+   color:white;
+   font-size: 20px;
+   border-radius: 6px;
+}
+.bouton{
+   background-color: #a9c0a6; 
+   color:white;
+   font-size: 10px;
+}

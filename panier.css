@@ -1,0 +1,25 @@
+body { background-color: #edca82; 
+}
+h1{
+text-align: center;
+}
+.form-submit-button {
+
+    background: black;
+    
+    color: white;
+    
+    margin-left: 150px;
+
+    height: 50px;
+    
+    width: 200px;
+}
+.margebouton{
+    margin-left: 150px;
+    margin-top: 40px; 
+    background-color: #a9c0a6; 
+    color:white;
+    font-size: 20px;
+    border-radius: 6px;
+ }
